@@ -1,10 +1,6 @@
 import numpy as np
 from function_graph import f
 
-T = 2  # Период функции
-N = 3  # Число членов ряда Фурье
-
-
 #выводим посчитанные фурье коэффициенты
 def get_fourier_coefficients(func, T, N):
     for n in range(1, N + 1):

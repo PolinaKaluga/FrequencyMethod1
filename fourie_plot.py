@@ -3,17 +3,12 @@ import matplotlib.pyplot as plt
 
 
 
-# T = 2  # Период функции
-# N = 3  # Число членов ряда Фурье
-
-
-# Вычисляем коэффициенты a_n и b_n для ряда Фурье
 def fourier_coefficients(func, T, N):
     a_n = lambda n: 2/T * np.trapz([func(t) * np.cos(2*np.pi*n*t/T) for t in np.linspace(0, T, 1000)], np.linspace(0, T, 1000))
     b_n = lambda n: 2/T * np.trapz([func(t) * np.sin(2*np.pi*n*t/T) for t in np.linspace(0, T, 1000)], np.linspace(0, T, 1000))
     return a_n, b_n
 
-# Вычисляем сумму ряда Фурье
+
 def fourier_series(t, a_n, b_n, T, N):
     sum = 0
     for n in range(1, N + 1):
@@ -21,7 +16,6 @@ def fourier_series(t, a_n, b_n, T, N):
     return sum
 
 
-# Построение графика функции и ряда Фурье
 def plot_fourier_series(func, T, N):
     a_n, b_n = fourier_coefficients(func, T, N)
 
