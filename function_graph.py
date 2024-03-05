@@ -2,10 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def f(t):
-    if (t % 2 >= 0 and t % 2 < 1):
-        return 2
-    elif (t % 2 >= 1 and t % 2 < 2):
-        return 3
+    return ((np.sin(t))**3 - np.cos(t))
 
 def draw_function(func, x_min, x_max):
     x = np.linspace(x_min, x_max, 1000)

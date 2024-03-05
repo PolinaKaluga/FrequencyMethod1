@@ -21,7 +21,7 @@ def plot_fourier_series(func, T, N):
 
     t = np.linspace(2, 10, 1000)
     y = [func(i) for i in t]
-    z = [fourier_series(i, a_n, b_n, T, N) +2.5 for i in t]
+    z = [fourier_series(i, a_n, b_n, T, N)  for i in t]
 
     plt.figure(figsize=(10, 5))
     plt.plot(t, y)
