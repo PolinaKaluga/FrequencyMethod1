@@ -28,7 +28,7 @@ def plot_fourier_series(func, T, N):
     plt.plot(t, z)
     plt.xlabel('t')
     plt.ylabel('y')
-    plt.title(f'N = {N}')
+    plt.title("Частичная сумма Фурье F(t)   " + f'N = {N}')
     plt.grid()
     plt.legend()
     plt.show()

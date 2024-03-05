@@ -16,7 +16,7 @@ def draw_function(func, x_min, x_max):
     plt.plot(x, y)
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title('Периодическая функция')
+    plt.title('График функции')
     plt.grid(True)
     plt.show()
 
